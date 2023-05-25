@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Haris-Mohanty/JobFinder/issues"
   },
-  "homepage": "https://github.com/Haris-Mohanty/JobFinder#readme"
+  "homepage": "https://github.com/Haris-Mohanty/JobFinder#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
