@@ -1,0 +1,19 @@
+{
+  "name": "jobfinder",
+  "version": "1.0.0",
+  "description": "JobFinder: A user-friendly job portal connecting job seekers and employers, providing efficient search and application tools for seamless career opportunities.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haris-Mohanty/JobFinder.git"
+  },
+  "author": "Haris Mohanty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haris-Mohanty/JobFinder/issues"
+  },
+  "homepage": "https://github.com/Haris-Mohanty/JobFinder#readme"
+}
