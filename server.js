@@ -5,4 +5,6 @@ const express = require("express");
 const app = express();
 
 // Rout Create
-app.get()
+app.get("/", (request, response) => {
+    response.send("<h1>Welcome to JobFinder!</h1>");
+});
