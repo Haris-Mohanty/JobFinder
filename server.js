@@ -15,7 +15,10 @@ app.get("/", (request, response) => {
     response.send("<h1>Welcome to JobFinder!</h1>");
 });
 
+// port
+const port = process.env.PORT || 8080;
+
 // Listen
 app.listen(8080, () => {
-    console.log("Node Server Running on Port 8080");
+    console.log(`Node Server Running on Port 8080`);
 });
