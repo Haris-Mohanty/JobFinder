@@ -1,5 +1,11 @@
-//Express
+// import
 import express from 'express';
+
+import dotenv from 'dotenv';
+
+// Dot env Config
+dotenv.config();
+
 
 // Rest Object
 const app = express();
