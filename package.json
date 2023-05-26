@@ -4,7 +4,8 @@
   "description": "JobFinder: A user-friendly job portal connecting job seekers and employers, providing efficient search and application tools for seamless career opportunities.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "node server.js",
+    "server" : "nodemon server.js"
   },
   "repository": {
     "type": "git",
