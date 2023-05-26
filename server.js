@@ -3,6 +3,8 @@ import express from 'express';
 
 import dotenv from 'dotenv';
 
+import colors from 'colors';
+
 // Dot env Config
 dotenv.config();
 
