@@ -11,5 +11,5 @@ app.get("/", (request, response) => {
 
 // Listen
 app.listen(8080, () => {
-    console.log("Server Running")
+    console.log("Node Server Running");
 });
