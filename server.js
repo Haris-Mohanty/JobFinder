@@ -19,6 +19,6 @@ app.get("/", (request, response) => {
 const port = process.env.PORT || 8080;
 
 // Listen
-app.listen(8080, () => {
-    console.log(`Node Server Running on Port 8080`);
+app.listen(port, () => {
+    console.log(`Node Server Running In ${process.env.DEV_MODE} mode on port ${port}`);
 });
