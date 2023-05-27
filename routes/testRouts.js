@@ -4,7 +4,7 @@ import express from "express";
 const router = express.Router();
 
 // routes create
-router.post("url")
+router.post("/test",);
 
 //exports
 export default router;
