@@ -7,6 +7,8 @@ import colors from 'colors';
 
 import connectDb from './config/db.js';
 
+import testRoutes from './routes/testRouts.js';
+
 
 // Dot env Config
 dotenv.config();
@@ -19,9 +21,7 @@ connectDb();
 const app = express();
 
 // Rout Create
-app.get("/", (request, response) => {
-    response.send("<h1>Welcome to JobFinder!</h1>");
-});
+
 
 // port
 const port = process.env.PORT || 8080;
