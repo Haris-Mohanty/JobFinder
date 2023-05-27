@@ -1,4 +1,9 @@
 import mongoose from "mongoose";
-import colors from 'colors';
+import colors from "colors";
 
-const connectDb = () => {};
+const connectDb = () => {
+  try {
+  } catch (error) {
+    
+  }
+};
