@@ -20,7 +20,11 @@ connectDb();
 // Rest Object
 const app = express();
 
-// Rout Create
+// middelwares
+app.use(express.json());
+
+// Routes
+app.use('./api/v1/test', testRoutes);
 
 
 // port
