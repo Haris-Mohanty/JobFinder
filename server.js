@@ -5,8 +5,14 @@ import dotenv from 'dotenv';
 
 import colors from 'colors';
 
+import connectDb from './config/db';
+
+
 // Dot env Config
 dotenv.config();
+
+// MongoDB Connection
+connectDb();
 
 
 // Rest Object
