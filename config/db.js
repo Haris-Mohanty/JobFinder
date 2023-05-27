@@ -9,3 +9,5 @@ const connectDb = () => {
     console.log(`MongoDB Error ${error}`.bgRed.white);
   }
 };
+
+export default connectDb;
