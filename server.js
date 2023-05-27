@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 import colors from 'colors';
 
-import connectDb from './config/db';
+import connectDb from './config/db.js';
 
 
 // Dot env Config
