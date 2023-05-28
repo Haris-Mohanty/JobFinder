@@ -3,6 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import colors from 'colors';
 import cors from 'cors';
+import morgan from 'morgan';
 
 //files import
 import connectDb from './config/db.js';
