@@ -22,9 +22,8 @@ const app = express();
 
 // middleware
 app.use(express.json());
-app.use(cors());
-app.use(morgan('dev'));
-
+app.use(cors()); //call cors
+app.use(morgan('dev')); //call morgan(Showing in console)
 
 
 // Routes
