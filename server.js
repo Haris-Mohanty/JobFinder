@@ -20,7 +20,7 @@ connectDb();
 // Rest Object
 const app = express();
 
-// middelwares
+// middleware
 app.use(express.json());
 
 // Routes
