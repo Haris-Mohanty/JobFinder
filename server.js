@@ -1,12 +1,11 @@
-// import
+//packages import
 import express from 'express';
-
 import dotenv from 'dotenv';
-
 import colors from 'colors';
+import cors from 'cors';
 
+//files import
 import connectDb from './config/db.js';
-
 import testRoutes from './routes/testRouts.js';
 
 
@@ -22,6 +21,8 @@ const app = express();
 
 // middleware
 app.use(express.json());
+
+
 
 // Routes
 app.use('/api/v1/test', testRoutes);
