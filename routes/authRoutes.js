@@ -4,7 +4,7 @@ import express from "express";
 const router = express.Router();
 
 //ROUTES CREATE
-router.post("./register")
+router.post("./register", )
 
 // EXPORT
 export default router;
