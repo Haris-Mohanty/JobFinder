@@ -7,13 +7,24 @@ const userSchema = new mongoose.Schema({
         type : String,
         required : [true, 'Name is Required!']
     },
+    lastName:{
+        type : String,
+    },
     email:{
         type : String,
         required : [true, 'Email is Required!'],
-        unique : true
+        unique : true,
+        validate : validator.isEmail
     },
-
-});
+    password:{
+        type : String,
+        required : [true, 'Password is Required!'],
+    },
+    location:{
+        type : String,
+        default:'India'
+    }
+},{timeStamp:true});
 
 
 export default mongoose.model('User', userSchema);
