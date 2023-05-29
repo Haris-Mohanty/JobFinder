@@ -1,4 +1,7 @@
 import express from "express";
 
 //ROUTER OBJECT CREATE
-const
+const router = express.Router();
+
+// EXPORT
+export default router;
