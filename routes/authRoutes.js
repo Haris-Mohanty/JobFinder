@@ -1,10 +1,11 @@
 import express from "express";
+import { registerController } from "../controller/authController";
 
 //ROUTER OBJECT
 const router = express.Router();
 
 //ROUTES CREATE
-router.post("./register", )
+router.post("./register", registerController);
 
 // EXPORT
 export default router;
