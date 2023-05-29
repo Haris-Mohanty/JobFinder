@@ -1,4 +1,5 @@
 import e from "express";
+import userModel from "../models/userModel";
 
 export const registerController = async (request, response) => {
   try {
@@ -15,7 +16,7 @@ export const registerController = async (request, response) => {
     }
 
     //check email exist or not
-    const existingUser = 
+    const existingUser = await userModel
 
   } catch (error) {
     console.log(error);
