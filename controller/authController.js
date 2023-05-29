@@ -1,4 +1,3 @@
-import e from "express";
 import userModel from "../models/userModel.js";
 
 export const registerController = async (request, response) => {
@@ -38,7 +37,7 @@ export const registerController = async (request, response) => {
     response.status(400).send({
       message: "Error in Register Controller!",
       success: false,
-      error,
+      error
     });
   }
 };
