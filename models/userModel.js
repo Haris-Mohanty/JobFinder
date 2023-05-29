@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import validator from "validator";
 
 //Schema Create
 const userSchema = new mongoose.Schema({
