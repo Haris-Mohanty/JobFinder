@@ -25,7 +25,8 @@ export const registerController = async (request, response) => {
         });
     }
 
-    
+    //CREATE USER
+    const user = await 
 
   } catch (error) {
     console.log(error);
