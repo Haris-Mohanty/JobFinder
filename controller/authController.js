@@ -4,6 +4,10 @@ export const registerController = async (request, response) => {
   try {
   } catch (error) {
     console.log(error);
-    response.status;
+    response.status(400).send({
+      message: "Error in Register Controller!",
+      success: false,
+      error,
+    });
   }
 };
