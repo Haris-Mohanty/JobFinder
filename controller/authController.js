@@ -1,1 +1,1 @@
-export const registerController = () => {};
+export const registerController = (request, response) => {};
