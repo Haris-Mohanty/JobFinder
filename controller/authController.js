@@ -1,5 +1,5 @@
 import e from "express";
-import userModel from "../models/userModel";
+import userModel from "../models/userModel.js";
 
 export const registerController = async (request, response) => {
   try {
@@ -16,7 +16,16 @@ export const registerController = async (request, response) => {
     }
 
     //check email exist or not
-    const existingUser = await userModel
+    const existingUser = await userModel.findOne({email});
+
+    if(existingUser){
+        return response.status(200).send({
+            success : false,
+            message : 'Email Already Registered! Please Login!'
+        });
+    }
+
+    
 
   } catch (error) {
     console.log(error);
