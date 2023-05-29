@@ -7,7 +7,11 @@ import morgan from 'morgan';
 
 //files import
 import connectDb from './config/db.js';
+
+//routes import
 import testRoutes from './routes/testRouts.js';
+import authRotes from './routes/authRoutes.js'
+
 
 
 // Dot env Config
