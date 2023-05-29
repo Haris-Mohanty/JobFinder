@@ -10,7 +10,7 @@ import connectDb from './config/db.js';
 
 //routes import
 import testRoutes from './routes/testRouts.js';
-import authRotes from './routes/authRoutes.js'
+import authRoutes from './routes/authRoutes.js'
 
 
 
@@ -32,6 +32,7 @@ app.use(morgan('dev')); //call morgan(Showing in console)
 
 // Routes
 app.use('/api/v1/test', testRoutes);
+app.use("/api/v1/auth", authRoutes)
 
 
 // port
