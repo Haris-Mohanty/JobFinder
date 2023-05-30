@@ -24,8 +24,12 @@ const userSchema = new mongoose.Schema({
     location:{
         type : String,
         default:'India'
+    },
+    timeStamp :{
+        type: Date,
+        default: Date.now
     }
-},{timeStamp:true});
+});
 
 
 export default mongoose.model('User', userSchema);
