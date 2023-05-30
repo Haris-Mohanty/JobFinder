@@ -16,7 +16,7 @@ const errorMiddleware = (err, request, response, next) => {
   //DUPLICATE ERROR
   if(err.code && err.code === 11000){  //E11000 duplicate key error index in mongodb mongoose
     defaultErrors.statusCode = 400;
-    defaultErrors.message = `${Object.keys(err.keyValue)}`;
+    defaultErrors.message = `${Object.keys(err.keyValue)} Field has to be Unique!`;
 
   }
 
