@@ -4,16 +4,16 @@ export const registerController = async (request, response, next) => {
   try {
     const { name, email, password } = request.body;
     //VALIDATE
-    if (!name) {
-      // return response.status(400).send({ success: false, message: "Please Provide Name!" });
-      next("Please Provide Name!");
-    }
-    if (!email) {
-      next("Please Provide Email!");
-    }
-    if (!password) {
-      next("Please Provide Password! Password Must be Greater then 6 Character!");
-    }
+    // if (!name) {
+    //   // return response.status(400).send({ success: false, message: "Please Provide Name!" });
+    //   next("Please Provide Name!");
+    // }
+    // if (!email) {
+    //   next("Please Provide Email!");
+    // }
+    // if (!password) {
+    //   next("Please Provide Password! Password Must be Greater then 6 Character!");
+    // }
 
     //check email exist or not
     const existingUser = await userModel.findOne({email});
