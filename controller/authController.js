@@ -5,7 +5,8 @@ export const registerController = async (request, response, next) => {
     const { name, email, password } = request.body;
     //VALIDATE
     if (!name) {
-      return response.status(400).send({ success: false, message: "Please Provide Name!" });
+      // return response.status(400).send({ success: false, message: "Please Provide Name!" });
+      next("Name is Required.");
     }
     if (!email) {
       return response.status(400).send({ success: false, message: "Please Provide Email!" });
@@ -33,7 +34,6 @@ export const registerController = async (request, response, next) => {
     });
 
   } catch (error) {
-    
-    
+    next(error);
   }
 };
