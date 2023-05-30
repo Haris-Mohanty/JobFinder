@@ -35,6 +35,7 @@ app.use(morgan('dev')); //call morgan(Showing in console)
 app.use('/api/v1/test', testRoutes);
 app.use('/api/v1/auth', authRoutes);
 
+
 // Validation Middleware
 app.use(errorMiddleware);
 
