@@ -6,12 +6,16 @@ const errorMiddleware = (err, request, response, next) => {
     message: err,
   };
   
-  
+
   //MISSING FIELD ERROR
   if (err.name == "ValidationError") {
     defaultErrors.statusCode = 400;
     defaultErrors.message = Object.values(err.errors).map((item) => item.message).join(",");
   }
+
+  //DUPLICATE ERROR
+  if()
+
   response.status(defaultErrors.statusCode).json({message : defaultErrors.message});
 };
 
