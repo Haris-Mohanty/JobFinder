@@ -14,8 +14,10 @@ const errorMiddleware = (err, request, response, next) => {
   }
 
   //DUPLICATE ERROR
-  if(err.code && err.code === 11000){
-    
+  if(err.code && err.code === 11000){  //E11000 duplicate key error index in mongodb mongoose
+    defaultErrors.statusCode = 400;
+    defaultErrors.message = `${Object.keys(err.keyValue)}`;
+
   }
 
   response.status(defaultErrors.statusCode).json({message : defaultErrors.message});
