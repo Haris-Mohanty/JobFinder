@@ -14,7 +14,9 @@ const errorMiddleware = (err, request, response, next) => {
   }
 
   //DUPLICATE ERROR
-  if()
+  if(err.code && err.code === 11000){
+    
+  }
 
   response.status(defaultErrors.statusCode).json({message : defaultErrors.message});
 };
