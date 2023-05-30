@@ -7,3 +7,5 @@ const errorMiddleware = (err, request, response, next) => {
     err,
   });
 };
+
+export default errorMiddleware();
