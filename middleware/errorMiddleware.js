@@ -6,6 +6,10 @@ const errorMiddleware = (err, request, response, next) => {
     message: "Something Went Wrong",
     err,
   });
+
+  //MISSING FIELD ERROR
+  if (err.name == "ValidationError") {
+  }
 };
 
 export default errorMiddleware;
