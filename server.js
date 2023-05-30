@@ -11,6 +11,7 @@ import connectDb from './config/db.js';
 //routes import
 import testRoutes from './routes/testRouts.js';
 import authRoutes from './routes/authRoutes.js'
+import errorMiddleware from './middleware/errorMiddleware.js';
 
 
 
@@ -33,6 +34,9 @@ app.use(morgan('dev')); //call morgan(Showing in console)
 // Routes
 app.use('/api/v1/test', testRoutes);
 app.use('/api/v1/auth', authRoutes);
+
+// Validation Middleware
+app.use(errorMiddleware);
 
 
 // port
