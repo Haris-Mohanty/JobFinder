@@ -26,6 +26,7 @@ export const registerController = async (request, response, next) => {
     const user = await userModel.create({name, email, password});
 
     // CREATE TOKEN
+    const token = 
 
 
     response.status(201).send({
