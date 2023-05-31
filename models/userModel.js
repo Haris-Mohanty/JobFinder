@@ -39,4 +39,7 @@ userSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
+// JSON WEB TOKEN CREATE
+userSchema.methods
+
 export default mongoose.model("User", userSchema);
