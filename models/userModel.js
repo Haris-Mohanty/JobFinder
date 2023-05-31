@@ -32,5 +32,7 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+//MIDDLEWARE CRATE
+userSchema
 
 export default mongoose.model('User', userSchema);
