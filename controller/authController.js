@@ -32,7 +32,12 @@ export const registerController = async (request, response, next) => {
     response.status(201).send({
         success : true,
         message : 'User Created Successfully!',
-        user,
+        user : {
+          name : user.name,
+          lastName : user.lastName,
+          email : user.email
+          password : user.password
+        },
         token
     });
 
