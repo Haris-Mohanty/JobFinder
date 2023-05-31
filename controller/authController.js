@@ -26,13 +26,14 @@ export const registerController = async (request, response, next) => {
     const user = await userModel.create({name, email, password});
 
     // CREATE TOKEN
-    const token = 
+    const token = user.createJWT();
 
 
     response.status(201).send({
         success : true,
         message : 'User Created Successfully!',
-        user
+        user,
+        token
     });
 
   } catch (error) {
