@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Haris-Mohanty/JobFinder#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
