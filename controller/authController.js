@@ -24,6 +24,10 @@ export const registerController = async (request, response, next) => {
 
     //CREATE USER
     const user = await userModel.create({name, email, password});
+
+    // CREATE TOKEN
+
+
     response.status(201).send({
         success : true,
         message : 'User Created Successfully!',
