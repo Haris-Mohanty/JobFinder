@@ -35,8 +35,8 @@ export const registerController = async (request, response, next) => {
         user : {
           name : user.name,
           lastName : user.lastName,
-          email : user.email
-          password : user.password
+          email : user.email,
+          location : user.location
         },
         token
     });
