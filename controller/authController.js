@@ -61,5 +61,8 @@ export const loginController = async (request, response) =>{
     next("Invalid Username & Password!");
   }
   //Compare password
-  const isMatch = await user.comparePassword(password)
+  const isMatch = await user.comparePassword(password);
+  if(!isMatch){
+    next("Invalid Username & Password!");
+  }
 };
