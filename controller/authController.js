@@ -53,6 +53,8 @@ export const loginController = async (request, response) =>{
   const {email, password} = request.body;
   //Validation
   if(!email || !password){
-    next("");
-  } 
+    next("Please Provide All Fields!");
+  }
+  //Find user by Email
+  
 };
