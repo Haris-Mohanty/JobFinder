@@ -51,4 +51,8 @@ export const registerController = async (request, response, next) => {
 //Login User
 export const loginController = async (request, response) =>{
   const {email, password} = request.body;
+  //Validation
+  if(!email || !password){
+    next("");
+  } 
 };
