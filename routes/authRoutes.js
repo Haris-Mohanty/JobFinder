@@ -6,6 +6,7 @@ const router = express.Router();
 
 //ROUTES CREATE
 router.post('/register', registerController); //Register(POST)
+router.post("/login",)
 
 
 // EXPORT
