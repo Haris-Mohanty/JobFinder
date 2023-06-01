@@ -65,4 +65,6 @@ export const loginController = async (request, response) =>{
   if(!isMatch){
     next("Invalid Username & Password!");
   }
+  //token generation
+  
 };
