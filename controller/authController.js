@@ -65,7 +65,7 @@ export const loginController = async (request, response, next) =>{
   if(!isMatch){
     next("Invalid Username & Password!");
   }
-  user.password = undefined;
+  user.password = undefined; //password security
   //token generation
   const token = user.createJWT();
   response.status(200).json({
