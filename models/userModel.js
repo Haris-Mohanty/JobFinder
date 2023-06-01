@@ -41,10 +41,13 @@ userSchema.pre("save", async function () {
 });
 
 // COMPARE PASSWORD
-const 
+userSchema.method.comparePassword = async function (userPassword) {
+  const isMatch = await bcrypt.compare(userPassword, this.password);
+  return isMatch;
+};
 
 // JSON WEB TOKEN
-userSchema.methods.createJWT = function () {
+userSchema.methods.createJWT = function () { //createJWT this is a function
   return jwt.sign(
     {
       userId: this._id,
