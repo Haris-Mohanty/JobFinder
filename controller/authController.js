@@ -56,5 +56,9 @@ export const loginController = async (request, response) =>{
     next("Please Provide All Fields!");
   }
   //Find user by Email
-  
+  const user = await userModel.findOne({email});
+  if(!user){
+    next("Invalid Username & Password!");
+  }
+
 };
