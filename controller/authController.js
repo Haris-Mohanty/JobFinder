@@ -1,5 +1,6 @@
 import userModel from "../models/userModel.js";
 
+// Register user
 export const registerController = async (request, response, next) => {
   try {
     const { name, email, password } = request.body;
@@ -45,3 +46,7 @@ export const registerController = async (request, response, next) => {
     next(error);
   }
 };
+
+
+//Login User
+export const loginController = () =>{};
