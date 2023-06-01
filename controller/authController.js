@@ -49,7 +49,7 @@ export const registerController = async (request, response, next) => {
 
 
 //Login User
-export const loginController = async (request, response) =>{
+export const loginController = async (request, response, next) =>{
   const {email, password} = request.body;
   //Validation
   if(!email || !password){
@@ -66,5 +66,11 @@ export const loginController = async (request, response) =>{
     next("Invalid Username & Password!");
   }
   //token generation
-  
+  const token = user.createJWT();
+  response.status(200).json({
+    success : true,
+    message : "Login Successfully!",
+    user,
+    token
+  });
 };
