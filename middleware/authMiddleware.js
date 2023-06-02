@@ -15,3 +15,4 @@ const userAuth = async (request, response, next) => {
   }
 };
 
+export default userAuth
