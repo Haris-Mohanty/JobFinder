@@ -6,4 +6,9 @@ const userAuth = async (request, response, next) => {
     next("Auth Failed!");
   }
   const token = authHeader.splite(" ")[1];
+  try {
+    
+  } catch (error) {
+    next("Auth Failed!");
+  }
 };
