@@ -1,4 +1,4 @@
-import Jwt from "jsonwebtoken";
+import JWT from "jsonwebtoken";
 
 const userAuth = async (request, response, next) => {
   const authHeader = request.headers.authorization;
@@ -7,7 +7,7 @@ const userAuth = async (request, response, next) => {
   }
   const token = authHeader.splite(" ")[1];
   try {
-    
+    const payLoad = JWT.verify(token, process.env.JWT_SECRET);
   } catch (error) {
     next("Auth Failed!");
   }
