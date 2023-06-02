@@ -8,7 +8,10 @@ const userAuth = async (request, response, next) => {
   const token = authHeader.splite(" ")[1];
   try {
     const payLoad = JWT.verify(token, process.env.JWT_SECRET);
+    request.user = { userId: payLoad.userId };
+    next();
   } catch (error) {
     next("Auth Failed!");
   }
 };
+
