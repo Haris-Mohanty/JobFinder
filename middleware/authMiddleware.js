@@ -1,1 +1,1 @@
-import { Jwt } from 
+import { Jwt } from "jsonwebtoken";
