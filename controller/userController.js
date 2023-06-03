@@ -11,4 +11,7 @@ export const updateUserController = async (request, response, next) => {
   user.lastName = lastName;
   user.email = email;
   user.location = location;
+
+  await user.save();
+  const 
 };
