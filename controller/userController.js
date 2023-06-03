@@ -13,5 +13,7 @@ export const updateUserController = async (request, response, next) => {
   user.location = location;
 
   await user.save();
-  const 
+  const token = user.createJWT();
+
+  
 };
