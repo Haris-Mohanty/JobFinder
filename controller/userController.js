@@ -1,1 +1,3 @@
-export const update
+export const updateUserController = () => {
+    
+};
