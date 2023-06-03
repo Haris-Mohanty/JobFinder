@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Password is Required!"],
     minLength: [6, "Password Length Should be Greater than 6 Charcter!"],
-    select : true,
+    select: true,
   },
   location: {
     type: String,
@@ -36,6 +36,7 @@ const userSchema = new mongoose.Schema({
 
 //MIDDLEWARE CREATE
 userSchema.pre("save", async function () {
+  if (!this.isModified) return;
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
 });
@@ -47,7 +48,8 @@ userSchema.methods.comparePassword = async function (userPassword) {
 };
 
 // JSON WEB TOKEN
-userSchema.methods.createJWT = function () { //createJWT this is a function
+userSchema.methods.createJWT = function () {
+  //createJWT this is a function
   return jwt.sign(
     {
       userId: this._id,
