@@ -14,6 +14,7 @@ import testRoutes from './routes/testRouts.js';
 import authRoutes from './routes/authRoutes.js'
 import errorMiddleware from './middleware/errorMiddleware.js';
 import userRoutes from './routes/userRoutes.js'
+import jobsRoutes from './routes/jobsRoutes.js'
 
 
 

@@ -1,1 +1,1 @@
-export const createJob = async (request, response, next) => {};
+export const createJobController = async (request, response, next) => {};
