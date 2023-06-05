@@ -8,5 +8,7 @@ export const createJobController = async (request, response, next) => {
   }
   request.body.createdBy = request.userId;
 
-  const job = jobsModel
+  const job = await jobsModel.create(request.body);
+
+  
 };
