@@ -10,5 +10,5 @@ export const createJobController = async (request, response, next) => {
 
   const job = await jobsModel.create(request.body);
 
-  
+  response.status(201).json({ job });
 };
