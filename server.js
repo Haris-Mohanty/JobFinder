@@ -34,10 +34,12 @@ app.use(cors()); //call cors
 app.use(morgan('dev')); //call morgan(Showing in console)
 
 
+
 // Routes
 app.use('/api/v1/test', testRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/job', jobsRoutes);
 
 
 // Validation Middleware
