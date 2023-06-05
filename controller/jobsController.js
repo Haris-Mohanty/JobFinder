@@ -1,4 +1,6 @@
 import jobsModel from "../models/jobsModel.js";
+
+// ******* CREATE JOBS **********
 export const createJobController = async (request, response, next) => {
   const { company, position } = request.body;
 
@@ -13,4 +15,7 @@ export const createJobController = async (request, response, next) => {
   response.status(201).json({ job });
 };
 
-export const getAllJobsController = () => {};
+// ******* GET JOBS **********
+export const getAllJobsController = async (request, response, next) => {
+    const 
+};
