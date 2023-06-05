@@ -12,3 +12,5 @@ export const createJobController = async (request, response, next) => {
 
   response.status(201).json({ job });
 };
+
+export const getAllJobsController = () => {};
