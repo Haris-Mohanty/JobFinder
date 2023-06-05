@@ -9,6 +9,6 @@ const router = express.Router();
 router.post("/create-job", userAuth, createJobController);
 
 // GET JOBS || GET
-router.get("/get-jobs", userAuth, getAllJobsController);
+router.get("/get-job", userAuth, getAllJobsController);
 
 export default router;
