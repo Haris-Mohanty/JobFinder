@@ -8,4 +8,7 @@ const router = express.Router();
 // CREATE JOBS || POST
 router.post("/create-job", userAuth, createJobController);
 
+// GET JOBS || GET
+router.get('./get-jobs')
+
 export default router;
