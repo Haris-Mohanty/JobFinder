@@ -4,35 +4,34 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 //Schema Create
-const userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, "Name is Required!"],
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, "Name is Required!"],
+    },
+    lastName: {
+      type: String,
+    },
+    email: {
+      type: String,
+      required: [true, "Email is Required!"],
+      unique: true,
+      validate: validator.isEmail,
+    },
+    password: {
+      type: String,
+      required: [true, "Password is Required!"],
+      minLength: [6, "Password Length Should be Greater than 6 Charcter!"],
+      select: true,
+    },
+    location: {
+      type: String,
+      default: "India",
+    },
   },
-  lastName: {
-    type: String,
-  },
-  email: {
-    type: String,
-    required: [true, "Email is Required!"],
-    unique: true,
-    validate: validator.isEmail,
-  },
-  password: {
-    type: String,
-    required: [true, "Password is Required!"],
-    minLength: [6, "Password Length Should be Greater than 6 Charcter!"],
-    select: true,
-  },
-  location: {
-    type: String,
-    default: "India",
-  },
-  timeStamp: {
-    type: Date,
-    default: Date.now,
-  },
-});
+  { timestamps: true }
+);
 
 //MIDDLEWARE CREATE
 userSchema.pre("save", async function () {
