@@ -64,5 +64,7 @@ export const deleteJobController = async (request, response, next) => {
   const job = await jobsModel.findOne({ _id: id });
 
   // Validation
-  if()
+  if(!job){
+    
+  }
 };
