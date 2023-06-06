@@ -4,7 +4,7 @@ import { loginController, registerController } from "../controller/authControlle
 //ROUTER OBJECT
 const router = express.Router();
 
-//ROUTES CREATE
+//****** ROUTES CREATE ******
 router.post('/register', registerController); //Register(POST)
 router.post("/login", loginController); //Login(POST)
 
