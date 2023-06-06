@@ -77,5 +77,5 @@ export const deleteJobController = async (request, response, next) => {
   await job.remove();
 
   // Response Send
-  response.status(200)
+  response.status(200).json({ message: "Job Deleted Successfully!" });
 };
