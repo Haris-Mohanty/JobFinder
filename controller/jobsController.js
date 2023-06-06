@@ -8,7 +8,7 @@ export const createJobController = async (request, response, next) => {
   if (!company || !position) {
     next("Please Provide All Fields!");
   }
-  request.body.createdBy = request.userId;
+  request.body.createdBy = request.user.userId;
 
   const job = await jobsModel.create(request.body);
 
@@ -17,7 +17,7 @@ export const createJobController = async (request, response, next) => {
 
 // ******* GET JOBS **********
 export const getAllJobsController = async (request, response, next) => {
-  const jobs = await jobsModel.find({ createdBy: request.userId });
+  const jobs = await jobsModel.find({ createdBy: request.user.userId });
   response.status(200).json({
     totalJobs: jobs.length,
     jobs,
@@ -39,5 +39,8 @@ export const updateJobController = async (request, response, next) => {
   if (!job) {
     next(`No Job Found With This Id : ${id}`);
   }
-  
+  if(request.user.userId === job.createdBy.toString()){
+    
+  }
+
 };
