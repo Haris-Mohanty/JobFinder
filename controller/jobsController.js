@@ -68,5 +68,8 @@ export const deleteJobController = async (request, response, next) => {
     next(`No Job Found With This Id:${id}`);
   }
   //check login user
-  if(!request.user.userId === )
+  if (!request.user.userId === job.createdBy.toString()) {
+    next("You are not Authoried to Update this Job!");
+    return;
+  }
 };
