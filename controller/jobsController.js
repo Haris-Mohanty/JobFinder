@@ -23,3 +23,7 @@ export const getAllJobsController = async (request, response, next) => {
     jobs,
   });
 };
+
+
+// *******  UPDATE JOBS  *******
+export 
