@@ -35,4 +35,9 @@ export const updateJobController = async (request, response, next) => {
   }
   //find job
   const job = await jobsModel.findOne({ _id: id });
+
+  if (!job) {
+    next(`No Job Found With This Id : ${id}`);
+  }
+  
 };
