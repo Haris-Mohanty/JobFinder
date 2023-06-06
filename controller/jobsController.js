@@ -72,4 +72,6 @@ export const deleteJobController = async (request, response, next) => {
     next("You are not Authoried to Update this Job!");
     return;
   }
+  //Delete
+  await job.remove
 };
