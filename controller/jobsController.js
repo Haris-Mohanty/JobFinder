@@ -59,4 +59,6 @@ export const updateJobController = async (request, response, next) => {
 // ******* DELETE JOB *******
 export const deleteJobController = async (request, response, next) => {
   const { id } = request.params;
+
+  //find job
 };
