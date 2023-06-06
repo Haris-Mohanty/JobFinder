@@ -67,4 +67,6 @@ export const deleteJobController = async (request, response, next) => {
   if (!job) {
     next(`No Job Found With This Id:${id}`);
   }
+  //check login user
+  if(!request.user.userId === )
 };
