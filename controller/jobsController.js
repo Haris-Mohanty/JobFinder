@@ -24,6 +24,5 @@ export const getAllJobsController = async (request, response, next) => {
   });
 };
 
-
 // *******  UPDATE JOBS  *******
-export 
+export const updateJobController = () => {};
