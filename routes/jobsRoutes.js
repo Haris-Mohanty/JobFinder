@@ -11,7 +11,10 @@ router.post("/create-job", userAuth, createJobController);
 // GET JOBS || GET
 router.get("/get-job", userAuth, getAllJobsController);
 
-// UPDATE JOBS || PUT || PATCH
+// UPDATE JOBS || PATCH
 router.patch("/update-job/:id", userAuth, updateJobController);
+
+// DELETE JOBS || DELETE
+router.delete()
 
 export default router;
