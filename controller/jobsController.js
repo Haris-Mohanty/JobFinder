@@ -39,8 +39,10 @@ export const updateJobController = async (request, response, next) => {
   if (!job) {
     next(`No Job Found With This Id : ${id}`);
   }
-  if(request.user.userId === job.createdBy.toString()){
-    
+  if (request.user.userId === job.createdBy.toString()) {
+    return;
+    next("You are not Authoried to Update this Job!");
   }
 
+  const updateJob
 };
