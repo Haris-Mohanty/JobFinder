@@ -52,7 +52,7 @@ export const updateJobController = async (request, response, next) => {
       runValidators: true,
     }
   );
-  // Response
+  // Response Send
   response.status(200).json({ updateJob });
 };
 
@@ -72,7 +72,10 @@ export const deleteJobController = async (request, response, next) => {
     next("You are not Authoried to Update this Job!");
     return;
   }
+
   //Delete
   await job.remove();
-  
+
+  // Response Send
+  response.status(200)
 };
