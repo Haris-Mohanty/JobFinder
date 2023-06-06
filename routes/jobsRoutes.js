@@ -15,6 +15,6 @@ router.get("/get-job", userAuth, getAllJobsController);
 router.patch("/update-job/:id", userAuth, updateJobController);
 
 // DELETE JOBS || DELETE
-router.delete()
+router.delete("/delete-job")
 
 export default router;
