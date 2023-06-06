@@ -34,5 +34,5 @@ export const updateJobController = async (request, response, next) => {
     next("Please Provide All Fields!");
   }
   //find job
-  const job = await jobsModel.find
+  const job = await jobsModel.findOne({ _id: id });
 };
