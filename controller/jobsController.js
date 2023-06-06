@@ -25,4 +25,6 @@ export const getAllJobsController = async (request, response, next) => {
 };
 
 // *******  UPDATE JOBS  *******
-export const updateJobController = () => {};
+export const updateJobController = async (request, response, next) => {
+  const { id } = request.params;
+};
