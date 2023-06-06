@@ -73,5 +73,6 @@ export const deleteJobController = async (request, response, next) => {
     return;
   }
   //Delete
-  await job.remove
+  await job.remove();
+  
 };
