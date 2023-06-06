@@ -55,3 +55,6 @@ export const updateJobController = async (request, response, next) => {
   // Response
   response.status(200).json({ updateJob });
 };
+
+// ******* DELETE JOB *******
+export const deleteJobController = 
