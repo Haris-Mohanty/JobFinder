@@ -44,5 +44,12 @@ export const updateJobController = async (request, response, next) => {
     next("You are not Authoried to Update this Job!");
   }
 
-  const updateJob
+  const updateJob = await jobsModel.findOneAndUpdate(
+    { _id: id },
+    request.body,
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
 };
