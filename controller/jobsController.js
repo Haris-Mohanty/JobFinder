@@ -57,4 +57,4 @@ export const updateJobController = async (request, response, next) => {
 };
 
 // ******* DELETE JOB *******
-export const deleteJobController = 
+export const deleteJobController = async () => {};
