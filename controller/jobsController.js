@@ -28,4 +28,11 @@ export const getAllJobsController = async (request, response, next) => {
 export const updateJobController = async (request, response, next) => {
   const { id } = request.params;
   const { company, position } = request.body;
+
+  // VALIDATION
+  if (!company || !position) {
+    next("Please Provide All Fields!");
+  }
+  //find job
+  const job = await jobsModel.find
 };
