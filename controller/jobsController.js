@@ -61,4 +61,5 @@ export const deleteJobController = async (request, response, next) => {
   const { id } = request.params;
 
   //find job
+  const job = await jobsModel.findOne({ _id: id });
 };
