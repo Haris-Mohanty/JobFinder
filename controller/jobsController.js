@@ -79,3 +79,8 @@ export const deleteJobController = async (request, response, next) => {
   // Response Send
   response.status(200).json({ message: "Job Deleted Successfully!" });
 };
+
+// ******* JOB STATS & FILTER *******
+export const jobStatsController = () => {
+  
+};
