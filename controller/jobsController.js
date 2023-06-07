@@ -87,7 +87,7 @@ export const jobStatsController = async (request, response) => {
     //Search by user job
     {
       $match :{
-        createdBy:new mongoose
+        createdBy:new mongoose.objectId
       }
     }
   ])
