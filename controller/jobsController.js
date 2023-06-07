@@ -86,9 +86,9 @@ export const jobStatsController = async (request, response) => {
   const stats = await jobsModel.aggregate([
     //Search by user job
     {
-      $match :{
-        createdBy:new mongoose.objectId
-      }
-    }
-  ])
+      $match: {
+        createdBy: new mongoose.Types.ObjectId(request.user.userId),
+      },
+    },
+  ]);
 };
