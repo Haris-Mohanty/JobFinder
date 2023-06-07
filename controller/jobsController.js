@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import jobsModel from "../models/jobsModel.js";
 
 // ******* CREATE JOBS **********
@@ -83,9 +84,11 @@ export const deleteJobController = async (request, response, next) => {
 // ******* JOB STATS & FILTER *******
 export const jobStatsController = async (request, response) => {
   const stats = await jobsModel.aggregate([
-    //Search by user
+    //Search by user job
     {
-
+      $match :{
+        createdBy:new mongoose
+      }
     }
   ])
 };
