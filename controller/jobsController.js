@@ -81,6 +81,4 @@ export const deleteJobController = async (request, response, next) => {
 };
 
 // ******* JOB STATS & FILTER *******
-export const jobStatsController = () => {
-  
-};
+export const jobStatsController = (request, response, next) => {};
