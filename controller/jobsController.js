@@ -82,7 +82,10 @@ export const deleteJobController = async (request, response, next) => {
 
 // ******* JOB STATS & FILTER *******
 export const jobStatsController = async (request, response) => {
-  const stats = await jobsModel.aggregate({
-    
-  })
+  const stats = await jobsModel.aggregate([
+    //Search by user
+    {
+
+    }
+  ])
 };
