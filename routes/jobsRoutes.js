@@ -22,8 +22,7 @@ router.patch("/update-job/:id", userAuth, updateJobController);
 // DELETE JOBS || DELETE
 router.delete("/delete-job/:id", userAuth, deleteJobController);
 
-
 // JOBS STATS FILTER || GET
-router.get("/job-stats", userAuth, deleteJobController);
+router.get("/job-stats", userAuth);
 
 export default router;
