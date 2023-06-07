@@ -91,4 +91,5 @@ export const jobStatsController = async (request, response) => {
       },
     },
   ]);
+  response.
 };
