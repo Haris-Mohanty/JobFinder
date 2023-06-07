@@ -91,5 +91,8 @@ export const jobStatsController = async (request, response) => {
       },
     },
   ]);
-  response.status(200).json({ stats });
+  response.status(200).json({
+    totalJob: stats.length,
+    stats,
+  });
 };
