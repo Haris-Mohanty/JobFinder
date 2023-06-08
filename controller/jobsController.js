@@ -108,10 +108,10 @@ export const jobStatsController = async (request, response) => {
   // Monthly & Yearly Stats show
   let monthlyApplication = await jobsModel.aggregate([
     {
-      $match : {
-        
-      }
-    }
+      $match: {
+        createdBy: new mongoose.Types.ObjectId(request.user.userId),
+      },
+    },
   ]);
 
   // Response Send
