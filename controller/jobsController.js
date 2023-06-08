@@ -105,6 +105,9 @@ export const jobStatsController = async (request, response) => {
     interview: stats.interview || 0,
   };
 
+  // Monthly & Yearly Stats show
+  
+
   // Response Send
   response.status(200).json({
     totalJob: stats.length,
