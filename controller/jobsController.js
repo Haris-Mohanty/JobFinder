@@ -119,7 +119,7 @@ export const jobStatsController = async (request, response) => {
           month: { $month: "$createdAt" },
         },
         count: {
-          
+          $sum: 1,
         },
       },
     },
