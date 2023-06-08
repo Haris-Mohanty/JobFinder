@@ -126,6 +126,8 @@ export const jobStatsController = async (request, response) => {
     },
   ]);
 
+  monthlyApplication = monthlyApplication.map
+
   // Response Send
   response.status(200).json({
     totalJob: stats.length,
