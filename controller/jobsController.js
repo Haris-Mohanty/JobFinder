@@ -89,8 +89,11 @@ export const jobStatsController = async (request, response) => {
       $match: {
         createdBy: new mongoose.Types.ObjectId(request.user.userId),
       },
+    },
+    {
       $group: {
-        _id
+        _id: "$status",
+        count: { $sum: 1 },
       },
     },
   ]);
