@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import jobsModel from "../models/jobsModel.js";
+import moment from "moment";
 
 // ******* CREATE JOBS **********
 export const createJobController = async (request, response, next) => {
