@@ -106,7 +106,7 @@ export const jobStatsController = async (request, response) => {
   };
 
   // Monthly & Yearly Stats show
-  
+  let monthlyApplication = await jobsModel.aggregate({})
 
   // Response Send
   response.status(200).json({
