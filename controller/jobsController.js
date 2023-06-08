@@ -97,6 +97,11 @@ export const jobStatsController = async (request, response) => {
       },
     },
   ]);
+
+  // Default Stats
+  const 
+
+  // Response Send
   response.status(200).json({
     totalJob: stats.length,
     stats,
