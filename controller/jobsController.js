@@ -113,7 +113,15 @@ export const jobStatsController = async (request, response) => {
       },
     },
     {
-      $group
+      $group: {
+        _id: {
+          year: { $year: "$createdAt" },
+          month: { $month: "$createdAt" },
+        },
+        count: {
+          
+        },
+      },
     },
   ]);
 
