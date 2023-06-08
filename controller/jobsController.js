@@ -99,7 +99,11 @@ export const jobStatsController = async (request, response) => {
   ]);
 
   // Default Stats
-  const 
+  const defaultStats = {
+    pending: stats.pending || 0,
+    reject: stats.reject || 0,
+    interview: stats.interview || 0,
+  };
 
   // Response Send
   response.status(200).json({
