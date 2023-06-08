@@ -136,7 +136,7 @@ export const jobStatsController = async (request, response) => {
       .year(year)
       .format("MMM Y");
     return { date, count };
-  });
+  }).reverse();
 
   // Response Send
   response.status(200).json({
