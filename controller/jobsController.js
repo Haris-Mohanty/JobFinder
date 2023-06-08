@@ -112,6 +112,9 @@ export const jobStatsController = async (request, response) => {
         createdBy: new mongoose.Types.ObjectId(request.user.userId),
       },
     },
+    {
+      $group
+    },
   ]);
 
   // Response Send
