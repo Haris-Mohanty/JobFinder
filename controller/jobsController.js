@@ -31,6 +31,7 @@ export const getAllJobsController = async (request, response, next) => {
     queryObject.status = status;
   }
    // Filter Logic (workType)
+   if(workType && )
   const queryResult = jobsModel.find(queryObject);
   const jobs = await queryResult;
 
