@@ -30,7 +30,8 @@ export const getAllJobsController = async (request, response, next) => {
   if(status && status !== 'all'){
     queryObject.status = status;
   }
-  
+  const queryResult = jobsModel.find(queryObject);
+  const jobs = await queryResult;
 
   // const jobs = await jobsModel.find({ createdBy: request.user.userId });
   response.status(200).json({
