@@ -24,7 +24,7 @@ export const getAllJobsController = async (request, response, next) => {
 
   // Condition for searching filters
   const queryObject = {
-    createdBy : request.user.userId;
+    createdBy : request.user.userId
   }
   // Filter Logic
   if(status && status !== 'all'){
