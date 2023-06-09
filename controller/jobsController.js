@@ -22,7 +22,10 @@ export const getAllJobsController = async (request, response, next) => {
 
   const {status} = request.query;
 
-  // Condition for s
+  // Condition for searching filters
+  const queryObject = {
+    createdBy : request.user.userId
+  }
 
   // const jobs = await jobsModel.find({ createdBy: request.user.userId });
   response.status(200).json({
