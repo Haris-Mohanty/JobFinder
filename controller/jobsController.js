@@ -27,7 +27,10 @@ export const getAllJobsController = async (request, response, next) => {
     createdBy : request.user.userId;
   }
   // Filter Logic
-  if(status)
+  if(status && status !== 'all'){
+    queryObject.status = status;
+  }
+  
 
   // const jobs = await jobsModel.find({ createdBy: request.user.userId });
   response.status(200).json({
