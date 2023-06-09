@@ -20,7 +20,7 @@ export const createJobController = async (request, response, next) => {
 // ******* GET JOBS **********
 export const getAllJobsController = async (request, response, next) => {
 
-  const {status} = request.query;
+  const {status, workType} = request.query;
 
   // Condition for searching filters
   const queryObject = {
@@ -39,6 +39,7 @@ export const getAllJobsController = async (request, response, next) => {
     jobs,
   });
 };
+
 
 // *******  UPDATE JOBS  *******
 export const updateJobController = async (request, response, next) => {
