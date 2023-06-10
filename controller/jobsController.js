@@ -44,7 +44,9 @@ export const getAllJobsController = async (request, response, next) => {
   const queryResult = jobsModel.find(queryObject);
 
   // Sorting
-  
+  if(sort){
+    
+  }
 
   const jobs = await queryResult;
 
