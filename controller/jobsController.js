@@ -41,12 +41,13 @@ export const getAllJobsController = async (request, response, next) => {
       $options : 'i'
     };
    }
-  const queryResult = jobsModel.find(queryObject);
+  let queryResult = jobsModel.find(queryObject);
 
   // Sorting
   if(sort === 'latest'){
-    queryResult = queryResult.sort('createdAt');
+    queryResult = queryResult.sort('-createdAt'); // "-" add for latest.
   }
+
 
   const jobs = await queryResult;
 
