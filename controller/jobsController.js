@@ -20,7 +20,7 @@ export const createJobController = async (request, response, next) => {
 // ******* GET JOBS **********
 export const getAllJobsController = async (request, response, next) => {
 
-  const {status, workType} = request.query;
+  const {status, workType, search} = request.query;
 
   // Condition for searching filters
   const queryObject = {
@@ -35,7 +35,9 @@ export const getAllJobsController = async (request, response, next) => {
       queryObject.workType = workType;
    }
    // Filter Logic (workType)
-   
+   if(search)
+
+
   const queryResult = jobsModel.find(queryObject);
   const jobs = await queryResult;
 
