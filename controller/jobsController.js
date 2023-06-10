@@ -43,7 +43,7 @@ export const getAllJobsController = async (request, response, next) => {
    }
   let queryResult = jobsModel.find(queryObject);
 
-  // Sorting
+  // SORTING
   if(sort === 'latest'){
     queryResult = queryResult.sort('-createdAt'); // "-" add for latest.
   }
