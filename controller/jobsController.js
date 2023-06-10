@@ -47,7 +47,9 @@ export const getAllJobsController = async (request, response, next) => {
   if(sort === 'latest'){
     queryResult = queryResult.sort('-createdAt'); // "-" add for latest.
   }
-
+  if(sort === 'oldest'){
+    queryResult
+  }
 
   const jobs = await queryResult;
 
