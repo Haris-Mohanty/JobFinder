@@ -43,7 +43,9 @@ export const getAllJobsController = async (request, response, next) => {
    }
   const queryResult = jobsModel.find(queryObject);
 
-  // 
+  // Sorting
+  
+
   const jobs = await queryResult;
 
   // const jobs = await jobsModel.find({ createdBy: request.user.userId });
