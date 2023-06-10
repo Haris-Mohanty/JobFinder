@@ -54,7 +54,7 @@ export const getAllJobsController = async (request, response, next) => {
     queryResult = queryResult.sort("position");
   }
   if(sort === 'z-a'){
-    queryResult = queryResult.sort("position");
+    queryResult = queryResult.sort("-position");
   }
 
   const jobs = await queryResult;
