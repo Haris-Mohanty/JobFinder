@@ -50,6 +50,9 @@ export const getAllJobsController = async (request, response, next) => {
   if(sort === 'oldest'){
     queryResult = queryResult.sort('createdAt');
   }
+  if(sort === 'a-z'){
+    
+  }
 
   const jobs = await queryResult;
 
