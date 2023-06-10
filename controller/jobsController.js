@@ -36,7 +36,10 @@ export const getAllJobsController = async (request, response, next) => {
    }
    // Filter Logic (workType)
    if(search){
-    queryObject
+    queryObject.position = {
+      $regex: search,
+      $options : 'i'
+    };
    }
 
 
