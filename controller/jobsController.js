@@ -34,6 +34,8 @@ export const getAllJobsController = async (request, response, next) => {
    if(workType && workType !== 'all'){
       queryObject.workType = workType;
    }
+   // Filter Logic (workType)
+   
   const queryResult = jobsModel.find(queryObject);
   const jobs = await queryResult;
 
@@ -100,6 +102,7 @@ export const deleteJobController = async (request, response, next) => {
   // Response Send
   response.status(200).json({ message: "Job Deleted Successfully!" });
 };
+
 
 // ******* JOB STATS & FILTER *******
 export const jobStatsController = async (request, response) => {
