@@ -58,7 +58,7 @@ export const getAllJobsController = async (request, response, next) => {
   }
 
   // ***** Pagination ****
-  const page = Number()
+  const page = Number(request.query)
 
 
   const jobs = await queryResult;
