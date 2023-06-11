@@ -18,5 +18,5 @@ router.post('/register',limiter, registerController); //Register(POST)
 router.post("/login",limiter, loginController); //Login(POST)
 
 
-// EXPORT
+
 export default router;
