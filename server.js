@@ -32,7 +32,7 @@ connectDb();
 const app = express();
 
 // middleware
-a
+app.use()
 app.use(express.json());
 app.use(cors()); //call cors
 app.use(morgan('dev')); //call morgan(Showing in console)
