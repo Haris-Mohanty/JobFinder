@@ -8,6 +8,7 @@ import morgan from 'morgan';
 
 //Security Packages
 import helmet from 'helmet';
+import xxs from 'xss-clean';
 
 //files import
 import connectDb from './config/db.js';
