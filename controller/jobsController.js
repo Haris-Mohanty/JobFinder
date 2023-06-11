@@ -63,7 +63,8 @@ export const getAllJobsController = async (request, response, next) => {
   const skip = (page - 1) * limit;
   queryResult = queryResult.skip(skip).limit(limit);
   //Jobs count
-  const totalJobs = await 
+  const totalJobs = await jobsModel.countDocuments(queryResult);
+  
 
   const jobs = await queryResult;
 
