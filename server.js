@@ -9,6 +9,7 @@ import morgan from 'morgan';
 //Security Packages
 import helmet from 'helmet';
 import xxs from 'xss-clean';
+import mongoSanitize from 'express-mongo-sanitize';
 
 //files import
 import connectDb from './config/db.js';
