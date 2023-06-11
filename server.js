@@ -36,6 +36,7 @@ const app = express();
 // middleware
 app.use(helmet());
 app.use(xxs());
+app.use(mongoSanitize());
 app.use(express.json());
 app.use(cors()); //call cors
 app.use(morgan('dev')); //call morgan(Showing in console)
