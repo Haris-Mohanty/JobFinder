@@ -14,8 +14,8 @@ const limiter = rateLimit({
 const router = express.Router();
 
 //****** ROUTES CREATE ******
-router.post('/register', registerController); //Register(POST)
-router.post("/login", loginController); //Login(POST)
+router.post('/register',limiter, registerController); //Register(POST)
+router.post("/login",limiter, loginController); //Login(POST)
 
 
 // EXPORT
