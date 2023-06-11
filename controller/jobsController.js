@@ -64,14 +64,15 @@ export const getAllJobsController = async (request, response, next) => {
   queryResult = queryResult.skip(skip).limit(limit);
   //Jobs count
   const totalJobs = await jobsModel.countDocuments(queryResult);
-  const numOfPage = Math.cell(totalJobs/limit);
+  const numOfPage = Math.ceil(totalJobs/limit);
 
   const jobs = await queryResult;
 
   // const jobs = await jobsModel.find({ createdBy: request.user.userId });
   response.status(200).json({
-    totalJobs: jobs.length,
+    totalJobs,
     jobs,
+    numOfPage,
   });
 };
 
