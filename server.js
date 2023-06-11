@@ -6,6 +6,9 @@ import colors from 'colors';
 import cors from 'cors';
 import morgan from 'morgan';
 
+//Security Packages
+import helmet from 'helmet';
+
 //files import
 import connectDb from './config/db.js';
 
@@ -29,6 +32,7 @@ connectDb();
 const app = express();
 
 // middleware
+a
 app.use(express.json());
 app.use(cors()); //call cors
 app.use(morgan('dev')); //call morgan(Showing in console)
