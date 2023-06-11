@@ -57,6 +57,10 @@ export const getAllJobsController = async (request, response, next) => {
     queryResult = queryResult.sort("-position");
   }
 
+  // ***** Pagination ****
+  const page = Number()
+
+
   const jobs = await queryResult;
 
   // const jobs = await jobsModel.find({ createdBy: request.user.userId });
