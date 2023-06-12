@@ -1,7 +1,8 @@
-//packages import
-import express from 'express';
+//API Documentation
 import swaggerDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
+//packages import
+import express from 'express';
 import 'express-async-errors';
 import dotenv from 'dotenv';
 import colors from 'colors';
@@ -30,6 +31,8 @@ dotenv.config();
 
 // MongoDB Connection
 connectDb();
+
+//Swagger API Config
 
 
 // Rest Object
