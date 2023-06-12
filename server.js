@@ -70,6 +70,10 @@ app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/job', jobsRoutes);
 
+// HomeRoutes (root)
+app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(spec));
+
+
 
 // Validation Middleware
 app.use(errorMiddleware);
