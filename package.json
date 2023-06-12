@@ -32,6 +32,7 @@
     "moment": "^2.29.4",
     "mongoose": "^7.2.1",
     "morgan": "^1.10.0",
+    "swagger-jsdoc": "^6.2.8",
     "validator": "^13.9.0",
     "xss-clean": "^0.1.4"
   }
