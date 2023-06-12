@@ -48,6 +48,7 @@ const options = {
     },
     apis: ['./routes/*.js']
 };
+const spec = swaggerDoc(options);
 
 
 // Rest Object
