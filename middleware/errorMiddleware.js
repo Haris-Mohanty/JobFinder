@@ -1,6 +1,5 @@
 //ERROR MIDDLEWARE CREATE || NEXT FUNCTION
 const errorMiddleware = (err, request, response, next) => {
-  console.log(err);
   const defaultErrors = {
     statusCode: 500,
     message: err,
