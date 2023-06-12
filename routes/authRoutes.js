@@ -71,7 +71,7 @@ const limiter = rateLimit({
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/sch emas/User'
+ *             $ref: '#/components/schemas/User'
  *      responses:
  *        200:
  *          description: user created successfully
