@@ -33,6 +33,21 @@ dotenv.config();
 connectDb();
 
 //Swagger API Config
+const options = {
+    definition: {
+        openapi : "3.0.0",
+        info : {
+        title : "Job Finder App",
+        description : "Node ExpressJs Job Finder Application"
+        },
+        servers: [
+            {
+                url : "http://localhost:8080"
+            }
+        ]
+    },
+    apis: ['./routes/*.js']
+};
 
 
 // Rest Object
