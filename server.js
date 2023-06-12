@@ -10,7 +10,7 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import xxs from 'xss-clean';
 import mongoSanitize from 'express-mongo-sanitize';
-import swagger
+import swagger from 'swagger-jsdoc';
 
 //files import
 import connectDb from './config/db.js';
