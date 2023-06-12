@@ -28,6 +28,28 @@ const limiter = rateLimit({
  *     id:
  *      type: string
  *      description: The Auto-generated id of user collection
+ *     name:
+ *      type: string
+ *      description: User Name
+ *     lastName:
+ *      type: string
+ *      description: User last Name 
+ *     email:
+ *      type: string
+ *      description: User Email Address
+ *     password:
+ *      type: string
+ *      description: User Password should be Greater than 6 Character
+ *     location:
+ *      type: string
+ *      description: User location City or Country
+ * 	  example:
+ *      id: HGYJ4578GYHJUH58
+ *      name: John
+ *      lastName: Doe
+ *      email: jhonedoe@gmail.com
+ *      password: test@123
+ *      location: Mumbai
  */
 
 
