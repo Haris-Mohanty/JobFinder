@@ -1,5 +1,7 @@
 //packages import
 import express from 'express';
+import swaggerDoc from 'swagger-jsdoc';
+import swaggerUi from 'swagger-ui-express';
 import 'express-async-errors';
 import dotenv from 'dotenv';
 import colors from 'colors';
@@ -10,7 +12,6 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import xxs from 'xss-clean';
 import mongoSanitize from 'express-mongo-sanitize';
-import swagger from 'swagger-jsdoc';
 
 //files import
 import connectDb from './config/db.js';
